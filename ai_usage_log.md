@@ -9,47 +9,6 @@
 
 ### User
 
-<recommended_plugins>
-Here is a list of plugins that are available but not installed.
-
-- Dropbox (app-69b31dc2110c8191b8b47dc98fe5a052@openai-curated-remote)
-- Box (box@openai-curated-remote)
-- Codex Security (codex-security@openai-curated-remote)
-- Gmail (gmail@openai-curated-remote)
-- Google Calendar (google-calendar@openai-curated-remote)
-- Google Drive (google-drive@openai-curated-remote)
-- Linear (linear@openai-curated-remote)
-- Notion (notion@openai-curated-remote)
-- OpenAI Developers (openai-developers@openai-curated-remote)
-- Outlook Calendar (outlook-calendar@openai-curated-remote)
-- Outlook Email (outlook-email@openai-curated-remote)
-- SharePoint (sharepoint@openai-curated-remote)
-- Slack (slack@openai-curated-remote)
-- Teams (teams@openai-curated-remote)
-</recommended_plugins># AGENTS.md instructions
-
-<INSTRUCTIONS>
-## Browser preference
-
-- Prefer the Mac's system default browser for browser-based authentication and ordinary web workflows whenever the task and available tooling allow it. Avoid the Codex in-app browser unless the user explicitly requests it or the system browser cannot support the required interaction.
-</INSTRUCTIONS><environment_context>
-  <cwd>/Users/matthewbisbee/Documents/EECS 348 Software Engineering/Labs</cwd>
-  <shell>zsh</shell>
-  <current_date>2026-09-23</current_date>
-  <timezone>America/Chicago</timezone>
-  <filesystem><workspace_roots><root>/Users/matthewbisbee/Documents/EECS 348 Software Engineering/Labs</root><root>/Users/matthewbisbee/.codex/visualizations/2026/09/23/01a0cea0-3cb5-7840-abb0-5fe18e0e530f</root></workspace_roots><permission_profile type="managed"><file_system type="restricted"><entry access="read"><special>:root</special></entry><entry access="write"><path>/Users/matthewbisbee/Documents/EECS 348 Software Engineering/Labs</path></entry><entry access="write"><path>/Users/matthewbisbee/.codex/visualizations/2026/09/23/01a0cea0-3cb5-7840-abb0-5fe18e0e530f</path></entry><entry access="write"><special>:slash_tmp</special></entry><entry access="write"><special>:tmpdir</special></entry><entry access="read"><path>/Users/matthewbisbee/Documents/EECS 348 Software Engineering/Labs/.git</path></entry><entry access="read"><path>/Users/matthewbisbee/.codex/visualizations/2026/09/23/01a0cea0-3cb5-7840-abb0-5fe18e0e530f/.git</path></entry><entry access="read"><path>/Users/matthewbisbee/Documents/EECS 348 Software Engineering/Labs/.agents</path></entry><entry access="read"><path>/Users/matthewbisbee/.codex/visualizations/2026/09/23/01a0cea0-3cb5-7840-abb0-5fe18e0e530f/.agents</path></entry><entry access="read"><path>/Users/matthewbisbee/Documents/EECS 348 Software Engineering/Labs/.codex</path></entry><entry access="read"><path>/Users/matthewbisbee/.codex/visualizations/2026/09/23/01a0cea0-3cb5-7840-abb0-5fe18e0e530f/.codex</path></entry></file_system></permission_profile></filesystem>
-</environment_context>
-
-### Assistant Summary
-
-No separate assistant response preceded the assignment request. The supplied browser preference and workspace context were available during the subsequent work.
-
----
-
-## Interaction 2
-
-### User
-
 See the files pointed at in your current directory within Lab 04 folder.&#x20;
 
 
@@ -82,7 +41,7 @@ Read the assignment PDF, AI logging instructions, and Gen-AI guide using the PDF
 
 ---
 
-## Interaction 3
+## Interaction 2
 
 ### User
 
@@ -93,3 +52,25 @@ Also what is the best pipeline for demo? Run commands on my local machine for te
 ### Assistant Summary
 
 Reviewed the submission requirements and repository file list. Kept task1.c, task2.c, Makefile, and ai_usage_log.md as required deliverables, along with optional README, .gitignore, and regression tests. Removed the three instructor handouts from Git tracking while preserving their local copies, and added ignore rules for those handouts and macOS debug artifacts. Updated the README with submission guidance and commands for both local practice and an interactive Cycle demo from a fresh public clone in a temporary directory. Recommended Cycle for the live demo because it matches the environment already tested, with local runs for practice. Explained sample inputs, invalid-input demonstrations, running make test, and cleanup. No program source or test logic changed in this cleanup.
+
+---
+
+## Interaction 3
+
+### User
+
+See the last lab, as it had the same identical issue as what I'm about to describe, but was resolved properly:
+
+my first interaction to you was "Carefully review all instructions and prompts detailed in the files in this Lab 03 directory. You'll find that the final result of this once complete should be a link to a new github public repo..." but instead you detail things like "User
+
+\<recommended\_plugins> Here is a list of plugins that are available but not installed.
+
+- Airtable (airtable\@openai-curated-remote)
+- Alpaca (alpaca\@openai-curated-remote)
+- Apollo.io (apollo\@openai-curated-remote)..." as first interaction. and things like "Prefer the Mac's system default browser for browser-based authentication and ordinary web workflows whenever the task and available tooling all..." after that
+
+you can make a footnote at the end about this stuff if you think worth retaining at all, but it is not genuinely my interactions with you like what you're calling interaction 2 and 3 are. this is underlying agentic context from previous interactions that should be considered, in effect, part of you the model itself at this point, not instructions relevant to this chat
+
+### Assistant Summary
+
+Reviewed the corrected Lab 03 log and applied the same distinction to Lab 04: automatically supplied plugin listings, environment metadata, and inherited browser preferences are agent context, not student conversation. Removed the incorrectly numbered context entry, renumbered the actual Lab 04 requests so the original assignment request is Interaction 1, and added this correction verbatim as Interaction 3. Omitted the unnecessary context rather than retaining it as a footnote.

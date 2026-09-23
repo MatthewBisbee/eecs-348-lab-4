@@ -1,5 +1,16 @@
 # EECS 348 Lab 4 — C Programming
 
+## Submission files
+
+Submit the public repository URL. The required files are `task1.c`, `task2.c`,
+`Makefile` (with `all` and `clean` targets), and `ai_usage_log.md`.
+The AI-log guide also asks for submission of the log file itself, so attach it
+separately if the course submission page provides that upload.
+
+`README.md`, `.gitignore`, and `tests/` are optional supporting files retained
+for reproducible builds, demo instructions, and regression checks. Instructor
+handouts and compiled artifacts are not included in the submitted file tree.
+
 ## Build and run
 
 ```sh
@@ -75,7 +86,52 @@ and compares score 25 to all 38 rows extracted from the PDF. It also checks all
 nine scale pairs, category boundaries, absolute zero, invalid-input recovery,
 long lines, numeric range errors, repeated scores, the stop value, and EOF.
 
-Suggested commands for the required live demo:
+Use Cycle for the live demo to match the environment already verified for this
+submission. Local execution is convenient for practice. Unless the TA gives
+different directions, first show interactive runs, then the automated tests.
+
+From your Mac terminal, connect to Cycle:
+
+```sh
+ssh m755b852@cycle1.eecs.ku.edu
+```
+
+Then run these commands on Cycle. This uses a fresh public clone and removes
+the temporary demo directory when you leave the SSH session:
+
+```sh
+demo_dir=$(mktemp -d /tmp/m755b852-c-test.XXXXXX)
+trap 'cd /tmp; rm -rf -- "$demo_dir"' EXIT HUP INT TERM
+git clone https://github.com/MatthewBisbee/eecs-348-lab-4.git "$demo_dir/repo"
+cd "$demo_dir/repo"
+hostname
+gcc --version
+make clean all
+./task1
+./task2
+make test
+make clean
+exit
+```
+
+For `task1`, enter `25`, `-4`, `abc`, `0`, and `1`, one per prompt. Explain
+the combinations, invalid-input recovery, zero score, and stop value.
+For `task2`, enter `30`, `C`, and `F`, one per prompt. Run `./task2` again
+to show invalid input or a boundary such as `35`, `C`, `C` (Extreme Heat).
+
+For local practice on the Mac, use the existing checkout (a C compiler, Make,
+and Python 3 for tests must be installed):
+
+```sh
+cd "/Users/matthewbisbee/Documents/EECS 348 Software Engineering/Labs/Lab 04"
+make clean all
+./task1
+./task2
+make test
+make clean
+```
+
+Optional scripted examples, after `make all` on either machine:
 
 ```sh
 make clean all
@@ -94,7 +150,8 @@ targets during the live demo.
 ## AI usage
 
 The required conversation log is in [ai_usage_log.md](ai_usage_log.md).
-The instructor's original PDFs and logging instructions are retained here.
+The instructor's original PDFs and logging instructions are kept locally and
+excluded from the repository's current file tree.
 
 ## KU Cycle validation
 

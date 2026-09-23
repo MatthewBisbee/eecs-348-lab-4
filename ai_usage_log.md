@@ -79,3 +79,17 @@ Assignment description:&#x20;
 ### Assistant Summary
 
 Read the assignment PDF, AI logging instructions, and Gen-AI guide using the PDF skill, and read the KU Cycle C Test skill. Identified the conflicting Hot interval in the PDF and selected 25 to below 35 degrees Celsius to avoid overlapping Comfortable. Generated task1.c to enumerate football scoring combinations, task2.c to convert temperatures and provide categories and advisories, and a Makefile with all, clean, and test targets. Added validation for invalid numeric input, negative scores, long lines, invalid scales, nonfinite temperatures, below-absolute-zero temperatures, and EOF. Created a Python black-box test suite, an expected-output fixture extracted from the PDF, a README with build and demo instructions, and this usage log. The local build completed without warnings and all 10 test methods passed. An initial sandboxed GitHub authentication check failed; the network-enabled check confirmed valid authentication and that the intended Lab 4 repository did not already exist. Initialized and committed the local Git repository. Used the KU Cycle skill to copy it into a unique temporary directory on cycle1.eecs.ku.edu, verify tracked files and history, build with GCC 11.4.0, run all 10 test methods and representative demos, and check make clean and clean Git status. All checks passed without compiler warnings; tar emitted warnings about unsupported macOS extended metadata during transfer. Removed the temporary directory through a cleanup trap and verified its absence in a separate SSH check. Created and pushed the public repository at https://github.com/MatthewBisbee/eecs-348-lab-4. Recorded the Cycle results in the README, confirmed GitHub reports PUBLIC visibility, and verified a fresh public clone on Cycle 1: the build and all tests passed, make clean removed both executables, Git stayed clean, and a separate SSH check confirmed remote cleanup. The README includes commands and topics for the student’s required live demo; no live TA demo was performed.
+
+---
+
+## Interaction 3
+
+### User
+
+Review what was needed in the repo for final submission. AI usage log stays along with what else is deemed needed. I don't believe the instructions or assignment description is necessary, but the makefile, c, whatever else asked for is.
+
+Also what is the best pipeline for demo? Run commands on my local machine for testing or commands to first ssh into cycle from my mac and then run these? What are these commands in any case
+
+### Assistant Summary
+
+Reviewed the submission requirements and repository file list. Kept task1.c, task2.c, Makefile, and ai_usage_log.md as required deliverables, along with optional README, .gitignore, and regression tests. Removed the three instructor handouts from Git tracking while preserving their local copies, and added ignore rules for those handouts and macOS debug artifacts. Updated the README with submission guidance and commands for both local practice and an interactive Cycle demo from a fresh public clone in a temporary directory. Recommended Cycle for the live demo because it matches the environment already tested, with local runs for practice. Explained sample inputs, invalid-input demonstrations, running make test, and cleanup. No program source or test logic changed in this cleanup.

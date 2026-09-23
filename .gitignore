@@ -2,3 +2,9 @@
 /task2
 __pycache__/
 .DS_Store
+*.dSYM/
+
+# Instructor handouts stay local; they are not submission files.
+/AI_USAGE_LOG_INSTRUCTIONS-1.md
+/Description-2.pdf
+/Gen-AI Log Guide-1.pdf

@@ -95,3 +95,11 @@ targets during the live demo.
 
 The required conversation log is in [ai_usage_log.md](ai_usage_log.md).
 The instructor's original PDFs and logging instructions are retained here.
+
+## KU Cycle validation
+
+Tested on `cycle1.eecs.ku.edu` on September 23, 2026 with GCC 11.4.0.
+`make clean all test` passed all 10 test methods with no compiler warnings.
+The score-25 and 30°C-to-Fahrenheit demos also passed. `make clean` removed
+both executables, Git remained clean, and the temporary remote testing
+directory was removed and its absence verified in a separate SSH check.
